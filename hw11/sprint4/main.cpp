@@ -98,5 +98,6 @@ int main() {
 		totalFullness = 0;
 	}
 	
+	compare.close();
 	return 123;
 }
