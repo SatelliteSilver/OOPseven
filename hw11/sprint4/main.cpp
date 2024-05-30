@@ -51,22 +51,19 @@ int main() {
 	srand(time(0));
 	ofstream anal, compare;
 	compare.open("analog.txt");
-
-	//int NI = 50, NO = 70, capacity = 100;
 	int ni, no;
 	int sampleNum = 20;
 	Queue test(50, 50, 100);
-	
 	vector <int> q;
 	int loss[20], totalPacket = 0, timeLimit = 1000, maximumPacket = 0, sample = 20;
 	float totalFullness = 0;
 	int NumPacket[1000][20];
 	int elapsedSeconds = 0, T = 1;
-
-	// Queueing
 	for (int i = 0; i < sample; i++) {
 		loss[i] = 0;
 	}
+	
+	// Queueing
 	for (int i = 0; i < sample; i++) {
 		test.addNO();
 		q.clear();
